@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Confirm your email Address
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="who-do-you-work-for-scenario-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Confirm your email Address</h1>
+
+      <form class="form" action="/email-sent-scenario-1" method="post">
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {{ govukInput({
+          label: {
+            text: "Confirm your email address"
+          },
+          hint: {
+            text: "If your email is wrong just change it"
+          },
+          id: "confirm-email-scenario-1",
+          name: "confirmEmail",
+          type: "email",
+          value: data['email-scenario-1'],
+          autocomplete: "email",
+          attributes: {
+            spellcheck: "false"
+          }
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Yes - my email is correct</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

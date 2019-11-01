@@ -1,0 +1,62 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Report modern slavery - Feature prototypes
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Report modern slavery
+        <span class="govuk-caption-xl">Feature prototypes</span>
+      </h1>
+
+      <h2 class="govuk-heading-l">Save and exit prototype</h2>
+
+      <p>Your email coupled with your device will be used to validate your credentials, if you choose to save and continue at a later date.</p>
+
+      <h2 class="govuk-heading-m">Scenario 1</h2>
+
+      <p><a href="/existing-report-check-scenario-1">Login to application</a></p>
+
+      <p>The user will be filling out the form for the first time to report modern slavery and will need to supply their work email and organisation as part of the login process, in order to obtain a link to start the application process for that report.</p>
+
+      <p><a href="/almost-there-scenario-1">Fill Out first application</a></p>
+
+      <p>The user will fill out the form with guidance from the User Researcher on what selections/inputs to make. Upon partial completion of the form the user will save and exit the application to be completed at a later date.</p>
+
+      <h2 class="govuk-heading-m">Scenario 2</h2>
+
+      <p><a href="/existing-report-check-scenario-2">Returning to Existing application via website</a></p>
+
+      <p>After an application has been saved, the user can return via the website to continue the application and change any answers they previously made. This will generate a new link that will be submitted to their email in order to continue the application</p>
+
+      <p><a href="/almost-there-scenario-3">Returning to Existing application via email link</a></p>
+
+      <p>Via the email link the user will be able to return to their existing application and change any answers they previously made.</p>
+
+      <h2 class="govuk-heading-m">Scenario 3</h2>
+
+      <p><a href="/almost-there-scenario-4">Expired link (user has waited more than 30 minutes)</a></p>
+
+      <p>Via the email link the user will attempt to return to their existing application. However due to the exiparation of the link they will need to enter their email to request a new valid link.</p>
+
+      <h2 class="govuk-heading-m">Scenario 4</h2>
+
+      <p><a href="/almost-there-scenario-5">Application has been deleted after 28 days - user enters app via email link</a></p>
+
+      <p>Via the email link the user will attempt to return to their existing application. However since the application is deleted  after 28 days they will be shown a message prompting them to start a new application.</p>
+
+      <h2 class="govuk-heading-m">Scenario 5</h2>
+
+      <p><a href="/existing-report-check-scenario-6">Application has been deleted after 28 days - user enters app via website</a></p>
+
+      <p>Via the webiste the user will attempt to return to their existing application by entering their email in order to receive a new link to continue. However since the application is deleted  after 28 days they will be shown a message prompting them to start a new application.</p>
+
+    </div>
+</div>
+
+{% endblock %}
