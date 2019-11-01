@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Check your email
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/confirm-your-email-scenario-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+      <div class="column-two-thirds">
+          <header>
+        <h1 class="govuk-heading-l">An error has occured</h1>
+      </header>
+      <form class="form" action="/confirm-your-email-scenario-1" method="post">
+
+      <p>Unfortunately the email was not sent, you can resubmit the email or try a new email</p>
+      <a href="/who-do-you-work-for-scenario-1">Resubmit</a>
+      </form>
+      </div>
+  </div>
+
+{% endblock %}

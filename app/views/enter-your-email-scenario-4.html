@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Confirm your email Address
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/almost-there-scenario-4">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">The link has expired, we need to send you a new link. <br/> Enter your email address</h1>
+
+      <form class="form" action="/email-sent-scenario-4" method="post">
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {{ govukInput({
+          label: {
+            text: "Enter work email address"
+          },
+          hint: {
+            text: "We need this to confirm who you work for"
+          },
+          id: "enter-your-email-scenario-4",
+          name: "enterEmail4",
+          type: "email",
+          value: data['enterEmail4'],
+          autocomplete: "email",
+          attributes: {
+            spellcheck: "false"
+          }
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

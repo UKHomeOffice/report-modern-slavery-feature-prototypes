@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Is the potential victim under 18?
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/fr-location-scenario-1">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/pv-under-age-when-exploited-scenario-1" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "pv-under-age-scenario-1",
+          name: "pv-under-age-scenario-1",
+          fieldset: {
+            legend: {
+              text: "Is the potential victim under 18?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            {
+              value: "yes",
+              text: "Yes",
+              checked: checked("pv-under-age-scenario-1", "yes")
+            },
+            {
+              value: "no",
+              text: "No",
+              checked: checked("pv-under-age-scenario-1", "no")
+            },
+            {
+              value: "not-sure",
+              text: "Not sure",
+              checked: checked("pv-under-age-scenario-1", "not-sure")
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

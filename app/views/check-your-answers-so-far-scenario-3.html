@@ -1,0 +1,191 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/almost-there-scenario-3">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column">
+
+      <h1 class="govuk-heading-xl">Check your answers so far</h1>
+
+      <h2 class="govuk-heading-m">Your report</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Under 18
+          </dt>
+          <dd class="govuk-summary-list__value">
+              {% if (checked("pv-under-age-scenario-3", "yes")) or (checked("pv-under-age-scenario-3", "no")) or (checked("pv-under-age-scenario-3", "not-sure")) %}
+              {% if (checked("pv-under-age-scenario-3", "yes")) %}
+              Yes
+              {% endif %}
+              {% if (checked("pv-under-age-scenario-3", "no")) %}
+              No
+              {% endif %}
+              {% if (checked("pv-under-age-scenario-3", "not-sure")) %}
+              Not Sure
+              {% endif %}
+              {% else %}
+              {% if (checked("pv-under-age-scenario-1", "yes")) %}
+              Yes
+              {% endif %}
+              {% if (checked("pv-under-age-scenario-1", "no")) %}
+              No
+              {% endif %}
+              {% if (checked("pv-under-age-scenario-1", "not-sure")) %}
+              Not Sure
+              {% endif %}
+              {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+              <a href="/pv-under-age-scenario-3">
+                  Change
+                </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Under 18 when exploited
+          </dt>
+          <dd class="govuk-summary-list__value">
+              {% if (checked("pv-under-age-when-exploited-scenario-3", "yes")) or (checked("pv-under-age-when-exploited-scenario-3", "no")) or (checked("pv-under-age-when-exploited-scenario-3", "not-sure")) %}
+              {% if (checked("pv-under-age-when-exploited-scenario-3", "yes")) %}
+              Yes
+              {% endif %}
+              {% if (checked("pv-under-age-when-exploited-scenario-3", "no")) %}
+              No
+              {% endif %}
+              {% if (checked("pv-under-age-when-exploited-scenario-3", "not-sure")) %}
+              Not Sure
+              {% endif %}
+              {% else %}
+              {% if (checked("pv-under-age-scenario-1", "yes")) %}
+              Yes
+              {% endif %}
+              {% if (checked("pv-under-age-scenario-1", "no")) %}
+              No
+              {% endif %}
+              {% if (checked("pv-under-age-scenario-1", "not-sure")) %}
+              Not Sure
+              {% endif %}
+              {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/pv-under-age-when-exploited-scenario-3">
+              Change
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Location of report
+            </dt>
+            <dd class="govuk-summary-list__value">
+                {% if (checked("fr-location-scenario-3", "england")) or (checked("fr-location-scenario-3", "scotland")) or (checked("fr-location-scenario-3", "wales")) or (checked("fr-location-scenario-3", "northern-ireland")) %}
+                {% if (checked("fr-location-scenario-3", "england")) %}
+                England
+                {% endif %}
+                {% if (checked("fr-location-scenario-3", "scotland")) %}
+                Scotland
+                {% endif %}
+                {% if (checked("fr-location-scenario-3", "wales")) %}
+                Wales
+                {% endif %}
+                {% if (checked("fr-location-scenario-3", "northern-ireland")) %}
+                Northern Ireland
+                {% endif %}
+                {% else %}
+                {% if (checked("fr-location-scenario-1", "england")) %}
+                England
+                {% endif %}
+                {% if (checked("fr-location-scenario-1", "scotland")) %}
+                Scotland
+                {% endif %}
+                {% if (checked("fr-location-scenario-1", "wales")) %}
+                Wales
+                {% endif %}
+                {% if (checked("fr-location-scenario-1", "northern-ireland")) %}
+                Northern Ireland
+                {% endif %}
+                {% endif %}
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="/fr-location-scenario-3">
+                Change
+              </a>
+            </dd>
+          </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Where were they exploited
+          </dt>
+          <dd class="govuk-summary-list__value">
+              {% if (checked("exploited-where-scenario-3", "uk")) or (checked("exploited-where-scenario-3", "overseas")) or (checked("exploited-where-scenario-3", "uk-and-overseas")) %}
+              {% if (checked("exploited-where-scenario-3", "uk")) %}
+              UK
+              {% endif %}
+              {% if (checked("exploited-where-scenario-3", "overseas")) %}
+              Overseas
+              {% endif %}
+              {% if (checked("exploited-where-scenario-3", "uk-and-overseas")) %}
+              UK and Overseas
+              {% endif %}
+              {% else %}
+              {% if (checked("exploited-where-scenario-1", "uk")) %}
+              UK
+              {% endif %}
+              {% if (checked("exploited-where-scenario-1", "overseas")) %}
+              Overseas
+              {% endif %}
+              {% if (checked("exploited-where-scenario-1", "uk-and-overseas")) %}
+              UK and Overseas
+              {% endif %}
+              {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/exploited-where-scenario-3">
+              Change
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Victim's account
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>
+                {% if (data['more-detail-3']) %}
+                {{ data['more-detail-3'] }}
+                {% else %}
+                {{ data['more-detail'] }}
+                {% endif %}
+            </p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/what-happened-scenario-3">
+              Change
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <form action="" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

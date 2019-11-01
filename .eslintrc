@@ -1,0 +1,27 @@
+{
+    "env": {
+        "amd": true,
+        "browser": true,
+        "jest": true
+    },
+    "rules": {
+        "import/no-amd": 0,
+        "indent": [2],
+        "quotes": [2, "single", {"allowTemplateLiterals": true}],
+        "max-len": 0,
+        "no-multiple-empty-lines": [1,{ "max": 3 }],
+        "no-nested-ternary": 0,
+        "arrow-body-style": 0,
+        "arrow-parens": ["error", "always"],
+        "no-underscore-dangle": 0,
+        "prefer-const": 0,
+        "no-return-assign": 0,
+        "valid-jsdoc": ["error", {
+            "requireReturn": true,
+            "requireReturnType": true,
+            "requireParamDescription": true,
+            "requireReturnDescription": true
+        }]
+    },
+    "extends": "airbnb"
+}
