@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Check your email
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/enter-your-email-scenario-6">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+      <div class="column-two-thirds">
+          <header>
+        <h1 class="govuk-heading-l">Check your email</h1>
+      </header>
+      <form class="form" action="/enter-your-email-scenario-6" method="post">
+
+      <p>We have sent a link to the email you entered, {{ data['enterEmail6'] }}</p>
+      <p><br> Check your spam or junk folder if you can't find the email in your inbox</p>
+      <p>If you haven't received the email, you can resubmit the email or try a new email</p>
+      <a href="/enter-your-email-scenario-6">Resubmit</a>
+      </form>
+      </div>
+  </div>
+
+{% endblock %}
