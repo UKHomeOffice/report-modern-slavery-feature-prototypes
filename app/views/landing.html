@@ -1,0 +1,40 @@
+ƒ
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Report modern slavery - Feature prototypes
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/existing-report-check-scenario-1" method="post">
+        <h1 class="govuk-heading-xl">
+          Report modern slavery
+        </h1>
+
+        <p>First responders in the UK can use this service to:
+        </p>
+        
+        <ul class="govuk-body">
+          <li>refer potential victims of any age to the National Referral Mechanism</li>
+          <li>help potential victims receive support and medical care</li>
+          <li>notify the Home Office of potential victims (Duty to Notify)</li>
+        </ul>
+
+        <p>First responders work for designated organisations and help support potential victims of modern slavery.
+        </p>
+
+        <button class="govuk-button" data-module="govuk-button">Start now</button>
+
+        <h2 class="govuk-heading-m">Before you start</h2>
+
+        <p>You can save your application if you'd like to complete it later.</p>
+
+        <p>If you don't do anything for 1 hour, your session will expire. This is for security reasons. If you plan to be away, it's recommended you save your application</p>
+      </form>      
+    </div>
+</div>
+
+{% endblock %}
