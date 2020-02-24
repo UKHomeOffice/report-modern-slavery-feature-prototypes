@@ -12,7 +12,7 @@ Confirm your email Address
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">The link has expired, we need to send you a new link. <br/> Enter your email address</h1>
+        <h1 class="govuk-heading-l">The link has expired</h1>
 
       <form class="form" action="/email-sent-scenario-4" method="post">
 
@@ -20,10 +20,10 @@ Confirm your email Address
 
         {{ govukInput({
           label: {
-            text: "Enter work email address"
+            text: "Enter the email adress you used when you created the report."
           },
           hint: {
-            text: "We need this to confirm who you work for"
+            text: "We'll use this to send you a new link"
           },
           id: "enter-your-email-scenario-4",
           name: "enterEmail4",
