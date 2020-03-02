@@ -14,16 +14,13 @@ Confirm your email Address
     <div class="govuk-grid-column-two-thirds">
 
       <form class="form" action="/email-sent-scenario-1" method="post">
-        <h1 class="govuk-heading-l">Confirm your email Address</h1>
+        <h1 class="govuk-heading-l">Is your email address correct?</h1>
 
         {% from "govuk/components/input/macro.njk" import govukInput %}
 
         {{ govukInput({
-          label: {
-            text: "Is your email address correct?"
-          },
           hint: {
-            text: "Check your email address and make any changes"
+            text: "Check your email address and make any changes."
           },
           id: "confirm-email-scenario-1",
           name: "confirmEmail",

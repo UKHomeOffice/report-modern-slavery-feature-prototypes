@@ -17,10 +17,15 @@ Check your email
       </header>
       <form class="form" action="/enter-your-email-scenario-6" method="post">
 
-      <p>We have sent a link to the email you entered, {{ data['enterEmail6'] }}</p>
-      <p><br> Check your spam or junk folder if you can't find the email in your inbox</p>
-      <p>If you haven't received the email, you can resubmit the email or try a new email</p>
-      <a href="/enter-your-email-scenario-6">Resubmit</a>
+        <p>We have sent a link to the email you entered, {{ data['enterEmail2'] }}</p>
+        <p>If you do not receive the link, you can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>check your spam or junk folder</li>
+          <li>enter your email address again</li>
+          <li>try a different email address</li>
+        </ul>
+        <p>The link will stop working after 30 minutes, but you can request a new one when you are ready to continue.</p>
+        <a href="/enter-your-email-scenario-2">Send another link</a>
       </form>
       </div>
   </div>
